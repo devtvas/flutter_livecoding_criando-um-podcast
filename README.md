@@ -1,4 +1,5 @@
-## LIVE CODING - FLUTTER CRIAÇÃO DA UI PODCAST DIO
+<h1 align="center"> LIVE CODING </h1>
+<h2 align="center"> FLUTTER CRIAÇÃO DA UI PODCAST DIO </h2>
 
 
 Muito se tem falado de PodCast e do potencial que essa ferramenta tem em levar informação aos diversos usuários. Os podcasts permitem que o público ouça passivamente o conteúdo enquanto realiza outras atividades. Bem, isso significa que o público pode aprender sobre seus serviços e produtos sem precisar interromper o que está fazendo ou enquanto realiza tarefas diárias. Nesse sentido, iremos criar uma UI em flutter do PodCast Dio que hoje é apresentado no youtube, mas que poderá tornar-se um app futuramente. O objetivo é compreender sobre layout, recursos do flutter para criação de widgets, cards, Bottom navigation, modelo de um player de áudio. Essas são algumas das questões que serão abordadas pelo Expert Instructor João Paulo Miranda Matias nesta Live Coding.
@@ -27,12 +28,13 @@ Muito se tem falado de PodCast e do potencial que essa ferramenta tem em levar i
 [Digital Inovation One!](https://web.dio.me/)
 
 <h2>Detalhes de Configuracao</h2>
+
   * Channel: dev
   * Flutter SDK: 2.13.0-0.1.pre
   * Dart SDK: 2.17.0-222.0.dev
   * Design Pattern: MVC
   * Dependencias Utilizadas: --
 
-seguem meu perfil do [Linkedin](https://www.linkedin.com/in/devtvas/).
+# seguem meu perfil do [Linkedin](https://www.linkedin.com/in/devtvas/).
 
 #### 🚀️ Happy coding!
