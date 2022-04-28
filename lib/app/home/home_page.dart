@@ -51,6 +51,38 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: const EdgeInsets.only(right: 2, left: 20),
+                // height: MediaQuery.of(context).size.height * 0.9,
+                height: 35,
+                width: double.infinity,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: const [
+                    CustomBtnCategoryWidget(
+                      color: CustomColor.pink700,
+                      text: 'Kotlin',
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomBtnCategoryWidget(
+                      color: CustomColor.pink700,
+                      text: 'JAVA',
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomBtnCategoryWidget(
+                      color: CustomColor.pink700,
+                      text: 'FLUTTER',
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
