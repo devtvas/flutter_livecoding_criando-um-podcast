@@ -5,13 +5,14 @@ Muito se tem falado de PodCast e do potencial que essa ferramenta tem em levar i
 
 
 <div style="display:flex; justify-content:center;" >
+  <figcaption>Fig.1 - HomePage do Podcast Dio</figcaption>
  <figure>
  <img src=".github/2.jpeg" alt="Podcast Dio" height="490" width="250">
- <figcaption>Fig.1 - HomePage do Podcast Dio</figcaption>
  </figure>
+  <figcaption>Fig.2 - PodCastPage </figcaption>
  <figure>
  <img src=".github/1.jpeg" alt="Podcast Dio" height="490" width="250" style="margin-right:50px">
- <figcaption>Fig.2 - PodCastPage </figcaption>
+
  </figure>
  
 </div>
@@ -24,3 +25,14 @@ Muito se tem falado de PodCast e do potencial que essa ferramenta tem em levar i
 
 
 [Digital Inovation One!](https://web.dio.me/)
+
+<h2>Detalhes de Configuracao</h2>
+  * Channel: dev
+  * Flutter SDK: 2.13.0-0.1.pre
+  * Dart SDK: 2.17.0-222.0.dev
+  * Design Pattern: MVC
+  * Dependencias Utilizadas: --
+
+seguem meu perfil do [Linkedin](https://www.linkedin.com/in/devtvas/).
+
+#### 🚀️ Happy coding!
