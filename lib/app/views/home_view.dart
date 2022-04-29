@@ -97,9 +97,145 @@ class _HomeViewState extends State<HomeView> {
                   child: const Text(
                     "Podcasts Recentes",
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                     ),
                     textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: Container(
+                  // color: Colors.red,
+                  height: isPlaying
+                      ? MediaQuery.of(context).size.height * 0.54
+                      : MediaQuery.of(context).size.height * 0.8,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        //princ
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/impulso.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {
+                            setState(() {
+                              isPlaying = !isPlaying;
+                            });
+                          },
+                          icon: Icon(
+                            isPlaying ? Icons.pause : Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: isPlaying
+                              ? CustomColor.pink700
+                              : CustomColor.gray700,
+                        ),
+                        //princ
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow_rounded,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        CustomCardPodcastWidget(
+                          img: "assets/avanade.jpg",
+                          title: "Spread Java Developer",
+                          description: "Bootcamp Spread Java Developer",
+                          click: () {},
+                          icon: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          color: CustomColor.gray700,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -112,6 +248,7 @@ class _HomeViewState extends State<HomeView> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Container(),
+                              // builder: (context) => const PodcastView(),
                             ),
                           );
                         },
@@ -119,205 +256,43 @@ class _HomeViewState extends State<HomeView> {
                           padding: const EdgeInsets.all(10),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                              gradient: const LinearGradient(colors: [])),
-                        ),
-                      ),
-                    )
-                  : Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 25),
-                      child: Container(
-                        // color: Colors.red,
-                        height: MediaQuery.of(context).size.height * 0.8,
-                        child: SingleChildScrollView(
-                          child: Column(
+                            gradient: const LinearGradient(
+                                colors: [
+                                  CustomColor.gray700,
+                                  CustomColor.gray200
+                                ],
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.bottomCenter),
+                            boxShadow: [
+                              BoxShadow(
+                                offset: const Offset(0, 20),
+                                color: CustomColor.gray700.withOpacity(0.4),
+                                blurRadius: 40,
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              // Text("oi"),
                               CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Bootcamp Spread Java Developer",
-                                description: "Bootcamp Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
+                                colorThemeText: false,
                                 img: "assets/philips.jpg",
                                 title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
+                                description: "08:16 / 20:21",
+                                click: () {},
+                                icon: const Icon(
+                                  Icons.pause,
                                   color: Colors.white,
                                 ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              CustomCardPodcastWidget(
-                                img: "assets/philips.jpg",
-                                title: "Spread Java Developer",
-                                description: "Bootcamp Spread Java Developer",
-                                click: () {
-                                  setState(() {
-                                    isPlaying = !isPlaying;
-                                  });
-                                },
-                                icon: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                ),
-                                color: isPlaying
-                                    ? CustomColor.pink700
-                                    : CustomColor.gray700,
+                                color: CustomColor.pink700,
                               ),
                             ],
                           ),
                         ),
                       ),
                     )
+                  : const SizedBox(height: 40),
             ],
           ),
         ),

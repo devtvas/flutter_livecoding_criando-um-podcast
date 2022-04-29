@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomCardPodcastWidget extends StatelessWidget {
+  /// Creates a card custom.
+  ///
+  /// colorThemeText is default (true).
+  /// * If [colorThemeText] is true, this colorThemeText return Colors.grey.
+  /// * If [colorThemeText] is false, this colorThemeText return Colors.white70.
+  ///
+  ///
   const CustomCardPodcastWidget({
     Key? key,
+    this.colorThemeText = true,
     required this.img,
     required this.title,
     required this.description,
@@ -10,6 +18,7 @@ class CustomCardPodcastWidget extends StatelessWidget {
     required this.icon,
     required this.click,
   }) : super(key: key);
+  final bool colorThemeText;
   final String img;
   final String title;
   final String description;
@@ -43,7 +52,8 @@ class CustomCardPodcastWidget extends StatelessWidget {
                   width: 200,
                   child: Text(
                     title,
-                    style: const TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                        color: colorThemeText ? Colors.grey : Colors.white70),
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
@@ -51,7 +61,8 @@ class CustomCardPodcastWidget extends StatelessWidget {
                   width: 200,
                   child: Text(
                     description,
-                    style: const TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                        color: colorThemeText ? Colors.grey : Colors.white70),
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
