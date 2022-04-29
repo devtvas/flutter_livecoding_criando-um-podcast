@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:live_coding_dio_podcast/app/util/custom_btn_category_widget.dart';
+import 'package:live_coding_dio_podcast/app/util/custom_btn_navigation_bar_widget.dart';
 import 'package:live_coding_dio_podcast/app/util/custom_card_podcast_widget.dart';
 import 'package:live_coding_dio_podcast/app/util/custom_color.dart';
-import 'package:live_coding_dio_podcast/app/views/podcast_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -119,7 +118,7 @@ class _HomeViewState extends State<HomeView> {
                           height: 20,
                         ),
                         CustomCardPodcastWidget(
-                          img: "assets/impulso.jpg",
+                          img: "assets/philips.jpg",
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {
@@ -140,11 +139,11 @@ class _HomeViewState extends State<HomeView> {
                           height: 20,
                         ),
                         CustomCardPodcastWidget(
-                          img: "assets/avanade.jpg",
+                          img: "assets/impulso.jpg",
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow_rounded,
                             color: Colors.white,
                           ),
@@ -158,7 +157,7 @@ class _HomeViewState extends State<HomeView> {
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -172,7 +171,7 @@ class _HomeViewState extends State<HomeView> {
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -186,7 +185,7 @@ class _HomeViewState extends State<HomeView> {
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -200,7 +199,7 @@ class _HomeViewState extends State<HomeView> {
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -214,7 +213,7 @@ class _HomeViewState extends State<HomeView> {
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -228,7 +227,7 @@ class _HomeViewState extends State<HomeView> {
                           title: "Spread Java Developer",
                           description: "Bootcamp Spread Java Developer",
                           click: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -280,7 +279,11 @@ class _HomeViewState extends State<HomeView> {
                                 img: "assets/philips.jpg",
                                 title: "Spread Java Developer",
                                 description: "08:16 / 20:21",
-                                click: () {},
+                                click: () {
+                                  setState(() {
+                                    isPlaying = !isPlaying;
+                                  });
+                                },
                                 icon: const Icon(
                                   Icons.pause,
                                   color: Colors.white,
@@ -296,6 +299,7 @@ class _HomeViewState extends State<HomeView> {
             ],
           ),
         ),
+        bottomNavigationBar: const CustomBtnNavigationBarWidget(),
       ),
     );
   }
