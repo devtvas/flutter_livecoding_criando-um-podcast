@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:live_coding_dio_podcast/app/home/home_page.dart';
+import 'package:live_coding_dio_podcast/app/views/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Live Coding Dio',
-      home: HomePage(),
+      home: HomeView(),
     );
   }
 }
